@@ -7,11 +7,12 @@ configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
+dockitems_remove:
+ - Launchpad
+ - TV
+ - Podcasts
+ - 'App Store'
+ - Email
 dockitems_persist: []
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
@@ -24,9 +25,9 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/jaulz/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Development/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -37,8 +38,12 @@ dotfiles_files:
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
+  - awscli
   - bash-completion
+  - cocoapods
+  - curl
   - doxygen
+  - fish
   - gettext
   - gifsicle
   - git
@@ -54,14 +59,13 @@ homebrew_installed_packages:
   - node
   - nvm
   - php
+  - postgresql
   - ssh-copy-id
-  - cowsay
   - readline
   - openssl
   - pv
-  - wget
   - wrk
-  - zsh-history-substring-search
+  - youtube-dl
 
 homebrew_taps:
   - homebrew/core
@@ -69,21 +73,39 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - barrier
+  - calibre
   - chromedriver
+  - discord
   - docker
-  - dropbox
   - firefox
   - google-chrome
   - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
+  - inkscape
+  - google-drive
   - transmit
+  - lulu
+  - maccy
+  - microsoft-office
+  - ngrok
+  - pushplaylabs-sidekick
+  - spotify
+  - soundflow
+  - soundflowerbed
+  - sublime-text
+  - tableplus
+  - the-unarchiver
   - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - whatsapp
+  - wireshark
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps:
+  - { id: 441258766, name: "Magnet" }
+  - { id: 497799835, name: "XCode" }
 mas_email: ""
 mas_password: ""
 

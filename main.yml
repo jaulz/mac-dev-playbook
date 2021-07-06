@@ -24,6 +24,15 @@
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
+    - role: gantsign.visual-studio-code-extensions
+      users:
+        - username: "{{general.user_name}}"
+          visual_studio_code_extensions:
+            - waderyan.gitblame
+            - cjhowe7.laravel-blade
+            - bmewburn.vscode-intelephense-client
+            - esbenp.prettier-vscode
+            - octref.vetur
 
   tasks:
     - import_tasks: tasks/sudoers.yml
