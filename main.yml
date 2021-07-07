@@ -34,9 +34,6 @@
             - esbenp.prettier-vscode
             - octref.vetur
       tags: ['vscode']
-    - role: galaxyproject.postgresql
-      tags: ['postgres']
-
 
   tasks:
     - import_tasks: tasks/sudoers.yml
@@ -57,6 +54,10 @@
     - import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ['sublime-text']
+
+    - import_tasks: tasks/postgres.yml
+      when: configure_postgres
+      tags: ['postgres']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
