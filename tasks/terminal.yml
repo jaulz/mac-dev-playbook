@@ -34,3 +34,11 @@
 - name: Change default shell
   user: name="{{ ansible_user_id }}" shell="{{ fish.stdout }}"
   become: yes
+
+- name: Add /op/homebrew/bin to PATH for arm-based Macs
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/paths
+    line: /opt/homebrew/bin
+    create: yes
+  when: ansible_architecture == "arm64"
