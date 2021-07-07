@@ -81,6 +81,7 @@ homebrew_installed_packages:
   - ssh-copy-id
   - readline
   - openssl
+  - yarn
   - youtube-dl
 
 homebrew_taps:
