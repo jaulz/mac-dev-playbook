@@ -26,3 +26,11 @@
     - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
   changed_when: false
   when: "'JJG-Term' not in terminal_theme.stdout"
+
+- name: Determine fish executable location
+  command: which fish
+  register: fish
+
+- name: Change default shell
+  user: name="{{ user_name }}" shell="{{ fish.stdout }}"
+  become: yes
