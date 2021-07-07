@@ -32,3 +32,11 @@
     user_install: false
     executable: "{{ item.executable | default(omit) }}"
   loop: "{{ gem_packages }}"
+
+- name: Install oh-my-fish packages.
+  command: fish -c "omf install {{ item.name | default(item) }}" 
+#  fisher:
+#    command: "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
+#    arguments: "{{ item.name | default(item) }} {{ item.version | default('@stable') }}"
+#    working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
+  loop: "{{ omf_packages }}"

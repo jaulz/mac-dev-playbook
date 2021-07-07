@@ -42,3 +42,16 @@
     line: /opt/homebrew/bin
     create: yes
   when: ansible_architecture == "arm64"
+
+- name: Install oh-my-fish
+  git: repo=https://github.com/oh-my-fish/oh-my-fish.git dest=~/.local/share/omf update=yes
+
+- name: Create fish config
+  copy:
+    src: files/fish/config.fish
+    dest: ~/.config/fish/config.fish
+
+- name: Install oh-my-fish themes and plugins
+  command: fish -c "omf install"
+  args:
+    creates: ~/.local/share/omf/themes/default/
