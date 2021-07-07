@@ -32,5 +32,5 @@
   register: fish
 
 - name: Change default shell
-  user: name="{{ user_name }}" shell="{{ fish.stdout }}"
+  user: name="{{ ansible_user_id }}" shell="{{ fish.stdout }}"
   become: yes
