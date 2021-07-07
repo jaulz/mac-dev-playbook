@@ -54,6 +54,7 @@ homebrew_installed_packages:
   - autoconf
   - awscli
   - bash-completion
+  - blackhole-2ch
   - cocoapods
   - curl
   - doxygen
@@ -110,8 +111,6 @@ homebrew_cask_apps:
   - pushplaylabs-sidekick
   - reikey
   - spotify
-  - soundflower
-  - soundflowerbed
   - sublime-text
   - tableplus
   - the-unarchiver
