@@ -52,6 +52,7 @@ homebrew_installed_packages:
   - gpg
   - httpie
   - iperf
+  - jq
   - libevent
   - sqlite
   - mcrypt
@@ -74,21 +75,26 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
+  - blockblock
   - calibre
   - chromedriver
   - discord
   - docker
+  - do-not-disturb
   - firefox
   - google-chrome
   - handbrake
   - inkscape
   - google-drive
   - transmit
+  - knockknock
   - lulu
   - maccy
   - microsoft-office
   - ngrok
+  - oversight
   - pushplaylabs-sidekick
+  - reikey
   - spotify
   - soundflow
   - soundflowerbed
@@ -106,6 +112,7 @@ homebrew_cask_apps:
 mas_installed_apps:
   - { id: 441258766, name: "Magnet" }
   - { id: 497799835, name: "XCode" }
+  - { id: 937984704, name: "Amphetamine" }
 mas_email: ""
 mas_password: ""
 
