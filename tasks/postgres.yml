@@ -2,5 +2,10 @@
 - name: Start postgres service
   command: "brew services restart postgresql"
 
+- name: Wait for postgres
+  wait_for:
+    host: "{{ master_ip }}"
+    port: 5432
+
 - name: Create database
   command: "createdb"
