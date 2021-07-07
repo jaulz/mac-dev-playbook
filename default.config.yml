@@ -28,8 +28,8 @@ dockitems_remove:
  - Pages
  - 'System Preferences'
 dockitems_persist:
- - name: "Google Chrome"
-   path: "/Applications/Google Chrome.app/"
+ - name: "Sidekick"
+   path: "/Applications/Sidekick.app/"
    pos: 2
 
 configure_sudoers: false
