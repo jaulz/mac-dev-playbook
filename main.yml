@@ -39,6 +39,7 @@
             - octref.vetur
       tags: ['vscode']
     - role: galaxyproject.postgresql
+      tags: ['postgres']
 
 
   tasks:
