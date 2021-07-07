@@ -94,7 +94,7 @@ homebrew_cask_apps:
   - chromedriver
   - discord
   - docker
-  - do-not-disturb
+#  - do-not-disturb
   - firefox
   - google-chrome
   - handbrake
