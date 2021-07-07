@@ -54,7 +54,7 @@ homebrew_installed_packages:
   - autoconf
   - awscli
   - bash-completion
-  - blackhole-2ch
+  - blackhole-16ch
   - cocoapods
   - curl
   - doxygen
