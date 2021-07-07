@@ -166,5 +166,9 @@ sublime_package_control:
   - "TrailingSpaces"
   - "WordCount"
 
+# Install Postgres
+postgresql_user_name: postgres
+postgresql_version: 11
+
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

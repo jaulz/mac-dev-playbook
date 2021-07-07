@@ -4,10 +4,6 @@
   vars_files:
     - default.config.yml
 
-  vars:
-    postgresql_user_name: postgres
-    postgresql_version: 11
-
   pre_tasks:
     - name: Include playbook configuration.
       include_vars: "{{ item }}"
