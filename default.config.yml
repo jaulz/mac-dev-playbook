@@ -86,6 +86,7 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
+  - blackhole-2ch
   - blockblock
   - calibre
   - chromedriver
