@@ -9,3 +9,4 @@
 
 - name: Create database
   command: "createdb"
+  ignore_errors: yes
