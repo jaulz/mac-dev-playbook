@@ -79,7 +79,6 @@ homebrew_installed_packages:
   - ssh-copy-id
   - readline
   - openssl
-  - pv
   - wrk
   - youtube-dl
 
