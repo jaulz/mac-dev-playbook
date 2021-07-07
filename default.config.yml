@@ -75,11 +75,9 @@ homebrew_installed_packages:
   - node
   - nvm
   - php
-  - postgresql
   - ssh-copy-id
   - readline
   - openssl
-  - wrk
   - youtube-dl
 
 homebrew_taps:

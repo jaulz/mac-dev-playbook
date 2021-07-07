@@ -3,6 +3,7 @@ roles:
   - name: elliotweiser.osx-command-line-tools
   - name: geerlingguy.dotfiles
   - name: gantsign.visual-studio-code-extensions
+  - name: galaxyproject.postgresql
 
 collections:
   - name: geerlingguy.mac

@@ -4,6 +4,10 @@
   vars_files:
     - default.config.yml
 
+  vars:
+    postgresql_user_name: postgres
+    postgresql_version: 11
+
   pre_tasks:
     - name: Include playbook configuration.
       include_vars: "{{ item }}"
@@ -33,6 +37,9 @@
             - bmewburn.vscode-intelephense-client
             - esbenp.prettier-vscode
             - octref.vetur
+      tags: ['vscode']
+    - role: galaxyproject.postgresql
+
 
   tasks:
     - import_tasks: tasks/sudoers.yml
