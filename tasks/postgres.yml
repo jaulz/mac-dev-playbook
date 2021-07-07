@@ -1,3 +1,6 @@
 ---
 - name: Start postgres service
   command: "brew services restart postgresql"
+
+- name: Create database
+  command: "createdb"
