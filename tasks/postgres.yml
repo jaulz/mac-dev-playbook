@@ -4,7 +4,7 @@
 
 - name: Wait for postgres
   wait_for:
-    host: "{{ master_ip }}"
+    host: 0.0.0.0
     port: 5432
 
 - name: Create database
