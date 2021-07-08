@@ -52,6 +52,7 @@ dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/projects/dotfiles
 dotfiles_files:
   - .zshrc
+  - .gitconfig
   - .gitignore
   - .inputrc
   - .osx
