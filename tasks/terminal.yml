@@ -35,7 +35,7 @@
   user: name="{{ ansible_user_id }}" shell="{{ fish.stdout }}"
   become: yes
 
-- name: Add /op/homebrew/bin to PATH for arm-based Macs
+- name: Add /opt/homebrew/bin to PATH for arm-based Macs
   become: yes
   ansible.builtin.lineinfile:
     path: /etc/paths

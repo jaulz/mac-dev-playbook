@@ -24,15 +24,12 @@
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
-    - role: gantsign.visual-studio-code-extensions
+    - role: gantsign.visual-studio-code
       users:
         - username: "{{ansible_user_id}}"
-          visual_studio_code_extensions:
-            - waderyan.gitblame
-            - cjhowe7.laravel-blade
-            - bmewburn.vscode-intelephense-client
-            - esbenp.prettier-vscode
-            - octref.vetur
+          visual_studio_code_extensions: "{{vscode_extensions}}"
+          visual_studio_code_settings_overwrite: "{{vscode_overwrite_settings}}"
+          visual_studio_code_settings: "{{vscode_settings}}"
       tags: ['vscode']
 
   tasks:

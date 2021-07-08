@@ -5,6 +5,7 @@ configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
 configure_postgres: true
+configure_vscode: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
@@ -35,6 +36,9 @@ dockitems_persist:
  - name: "Visual Studio Code"
    path: "/Applications/Visual Studio Code.app/"
    pos: 3
+ - name: "Spotify"
+   path: "/Applications/Spotify.app/"
+   pos: 4
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -52,6 +56,8 @@ dotfiles_files:
   - .inputrc
   - .osx
   - .vimrc
+#  - .config/starship.toml
+  - .config/fish/config.fish
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -69,6 +75,7 @@ homebrew_installed_packages:
   - go
   - gpg
   - httpie
+  - imagemagick
   - iperf
   - jq
   - libevent
@@ -81,12 +88,15 @@ homebrew_installed_packages:
   - ssh-copy-id
   - readline
   - openssl
+#  - starship
   - yarn
   - youtube-dl
+  - zsh-history-substring-search
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-fonts
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -99,6 +109,7 @@ homebrew_cask_apps:
   - docker
 #  - do-not-disturb
   - firefox
+  - font-fira-code
   - google-chrome
   - handbrake
   - inkscape
@@ -109,6 +120,7 @@ homebrew_cask_apps:
   - maccy
   - microsoft-office
   - ngrok
+  - omnidisksweeper
   - oversight
   - pushplaylabs-sidekick
   - reikey
@@ -118,7 +130,6 @@ homebrew_cask_apps:
   - the-unarchiver
   - vagrant
   - virtualbox
-  - visual-studio-code
   - vlc
   - whatsapp
   - wireshark
@@ -131,7 +142,7 @@ mas_installed_apps:
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.osx"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
@@ -155,6 +166,8 @@ pip_packages: []
 omf_packages:
  - name: nvm
    state: present # present/absent/latest, default: present
+ - name: bobthefish
+   state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
@@ -177,6 +190,23 @@ sublime_package_control:
 # Install Postgres
 postgresql_user_name: postgres
 postgresql_version: 11
+
+# Setup vscode
+vscode_extensions:
+- waderyan.gitblame
+- cjhowe7.laravel-blade
+- bmewburn.vscode-intelephense-client
+- esbenp.prettier-vscode
+- octref.vetur
+vscode_overwrite_settings: yes
+vscode_settings: {
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.automationShell.osx": "/bin/sh",
+  "terminal.integrated.shell.osx": "fish"
+}
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
