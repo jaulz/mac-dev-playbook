@@ -86,7 +86,7 @@ homebrew_installed_packages:
   - nmap
   - node
   - nvm
-  - php
+  - php@8.0
   - ssh-copy-id
   - readline
   - openssl
@@ -202,10 +202,9 @@ vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "terminal.integrated.fontFamily": "Roboto Mono for Powerline"
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
   "terminal.integrated.automationShell.osx": "/bin/sh",
   "terminal.integrated.defaultProfile.osx": "fish",
-  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
   "terminal.integrated.profiles.osx": {
       "fish": {
           "path": "fish",
