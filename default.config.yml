@@ -197,6 +197,7 @@ vscode_extensions:
 - bmewburn.vscode-intelephense-client
 - esbenp.prettier-vscode
 - octref.vetur
+- ryannaddy.laravel-artisan
 vscode_overwrite_settings: yes
 vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
@@ -212,7 +213,10 @@ vscode_settings: {
               "-l"
           ]
       }
-  }
+  },
+  "php.validate.executablePath": "/opt/homebrew/opt/php/bin/php",
+  "artisan.php.location": "/opt/homebrew/opt/php/bin/php",
+  "LaravelExtraIntellisense.phpCommand": "/opt/homebrew/opt/php/bin/php -r \"{code}\""
 }
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
