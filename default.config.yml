@@ -160,14 +160,11 @@ npm_packages: []
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
-pip_packages: []
-# - name: mkdocs
-#   state: present # present/absent/latest, default: present
-#   version: "0.16.3" # default: N/A
+pip_packages:
+ - name: powerline-status
+   state: present # present/absent/latest, default: present
 omf_packages:
  - name: nvm
-   state: present # present/absent/latest, default: present
- - name: bobthefish
    state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
@@ -204,9 +201,18 @@ vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline"
   "terminal.integrated.automationShell.osx": "/bin/sh",
-  "terminal.integrated.shell.osx": "fish"
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+  "terminal.integrated.profiles.osx": {
+      "fish": {
+          "path": "fish",
+          "args": [
+              "-l"
+          ]
+      }
+  }
 }
 
 # Glob pattern to ansible task files to run after all other tasks are finished.

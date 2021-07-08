@@ -19,13 +19,13 @@
   when: "'JJG-Term' not in terminal_theme.stdout"
 
 # TODO: This doesn't work in Yosemite. Consider a different solution?
-- name: Ensure custom Terminal profile is set as default.
-  command: "{{ item }}"
-  with_items:
-    - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
-    - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
-  changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+#- name: Ensure custom Terminal profile is set as default.
+#  command: "{{ item }}"
+#  with_items:
+#    - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
+#    - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
+#  changed_when: false
+#  when: "'JJG-Term' not in terminal_theme.stdout"
 
 - name: Determine fish executable location
   command: which fish
@@ -43,15 +43,27 @@
     create: yes
   when: ansible_architecture == "arm64"
 
+- name: Register oh-my-fish path.
+  stat:
+    path: "{{ lookup('env', 'OMF_PATH') }}"
+  register: omf_path
+
+- name: Clone oh-my-fish
+  git: repo=https://github.com/oh-my-fish/oh-my-fish.git dest=/tmp/omf update=yes
+  when: omf_path is undefined
+
 - name: Install oh-my-fish
-  git: repo=https://github.com/oh-my-fish/oh-my-fish.git dest=~/.local/share/omf update=yes
+  command: /tmp/omf/bin/install --offline
+  when: omf_path is undefined
 
-- name: Create fish config
-  copy:
-    src: files/fish/config.fish
-    dest: ~/.config/fish/config.fish
+- name: Clone powerline-fonts
+  git: repo=https://github.com/powerline/fonts.git dest=/tmp/powerline-fonts update=yes
 
-- name: Install oh-my-fish themes and plugins
-  command: fish -c "omf install"
-  args:
-    creates: ~/.local/share/omf/themes/default/
+- name: Install powerline-fonts
+  command: /tmp/powerline-fonts/install.sh
+
+- name: Install bobthefish theme
+  command: fish -c "omf install bobthefish"
+
+- name: Use bobthefish theme
+  command: fish -c "omf theme bobthefish"
