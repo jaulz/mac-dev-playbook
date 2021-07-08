@@ -66,6 +66,7 @@ homebrew_installed_packages:
   - awscli
   - bash-completion
   - cocoapods
+  - composer
   - curl
   - doxygen
   - fish
