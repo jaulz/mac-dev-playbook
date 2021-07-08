@@ -103,13 +103,14 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
-  - blackhole-2ch
+#  - blackhole-2ch
   - blockblock
   - calibre
   - chromedriver
   - discord
   - docker
 #  - do-not-disturb
+  - eqmac
   - firefox
   - font-fira-code
   - google-chrome
