@@ -168,6 +168,9 @@ pip_packages:
 omf_packages:
  - name: nvm
    state: present # present/absent/latest, default: present
+pecl_packages:
+ - name: xdebug
+   state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
@@ -199,6 +202,7 @@ vscode_extensions:
 - esbenp.prettier-vscode
 - octref.vetur
 - ryannaddy.laravel-artisan
+- felixfbecker.php-debug
 vscode_overwrite_settings: yes
 vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
