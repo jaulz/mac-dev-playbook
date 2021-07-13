@@ -91,6 +91,7 @@ homebrew_installed_packages:
   - readline
   - openssl
 #  - starship
+  - xdebug
   - yarn
   - youtube-dl
   - zsh-history-substring-search
