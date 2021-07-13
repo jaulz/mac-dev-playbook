@@ -1,6 +1,6 @@
 ---
 - name: Install PECL packages.
-  command: arch -x86_64 sudo pecl install  {{ item.name | default(item) }}
+  command: arch -arm64 sudo pecl install  {{ item.name | default(item) }}
   loop: "{{ pecl_packages }}"
 
 - name: Install global Composer packages.
