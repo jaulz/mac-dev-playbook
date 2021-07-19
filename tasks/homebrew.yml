@@ -1,0 +1,4 @@
+---
+- name: Start brew autoupdate
+  command: "brew autoupdate start --enable-notification"
+  changed_when: false

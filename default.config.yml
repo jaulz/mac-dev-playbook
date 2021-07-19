@@ -87,6 +87,7 @@ homebrew_installed_packages:
   - node
   - nvm
   - php@8.0
+  - postgis
   - ssh-copy-id
   - readline
   - openssl
@@ -99,6 +100,7 @@ homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - homebrew/cask-fonts
+  - homebrew/autoupdate
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
