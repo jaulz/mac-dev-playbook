@@ -205,7 +205,6 @@ vscode_extensions:
 - octref.vetur
 - ryannaddy.laravel-artisan
 - felixfbecker.php-debug
-- msjsdiag.debugger-for-chrome
 vscode_overwrite_settings: yes
 vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
