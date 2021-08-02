@@ -65,6 +65,7 @@ homebrew_installed_packages:
   - autoconf
   - awscli
   - bash-completion
+  - blueutil
   - cocoapods
   - composer
   - curl
@@ -101,6 +102,7 @@ homebrew_taps:
   - homebrew/cask
   - homebrew/cask-fonts
   - homebrew/autoupdate
+  - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -123,7 +125,7 @@ homebrew_cask_apps:
   - knockknock
   - lulu
   - maccy
-  - microsoft-office
+  - microsoft-office-2016
   - ngrok
   - omnidisksweeper
   - oversight
@@ -223,7 +225,25 @@ vscode_settings: {
   },
   "php.validate.executablePath": "/opt/homebrew/opt/php/bin/php",
   "artisan.php.location": "/opt/homebrew/opt/php/bin/php",
-  "LaravelExtraIntellisense.phpCommand": "/opt/homebrew/opt/php/bin/php -r \"{code}\""
+  "LaravelExtraIntellisense.phpCommand": "/opt/homebrew/opt/php/bin/php -r \"{code}\"",
+  "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
