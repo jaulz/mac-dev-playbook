@@ -117,6 +117,7 @@ homebrew_cask_apps:
   - eqmac
   - firefox
   - font-fira-code
+  - gimp
   - google-chrome
   - handbrake
   - inkscape
