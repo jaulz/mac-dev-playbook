@@ -65,6 +65,7 @@ homebrew_installed_packages:
   - autoconf
   - awscli
   - bash-completion
+  - boost
   - blueutil
   - cocoapods
   - composer
@@ -87,6 +88,7 @@ homebrew_installed_packages:
   - nmap
   - node
   - nvm
+  - pcre2
   - php@8.0
   - postgis
   - ssh-copy-id
@@ -108,7 +110,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
 #  - blackhole-2ch
-  - blockblock
+  - blockblocko
   - calibre
   - chromedriver
   - discord
@@ -176,6 +178,8 @@ omf_packages:
 pecl_packages:
  - name: xdebug
    state: present # present/absent/latest, default: present
+ - name: swoole
+   state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
@@ -205,9 +209,10 @@ vscode_extensions:
 - cjhowe7.laravel-blade
 - bmewburn.vscode-intelephense-client
 - esbenp.prettier-vscode
-- octref.vetur
+- johnsoncodehk.volar
 - ryannaddy.laravel-artisan
 - felixfbecker.php-debug
+- GitHub.codespaces
 vscode_overwrite_settings: yes
 vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",

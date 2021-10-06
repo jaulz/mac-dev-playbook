@@ -10,3 +10,8 @@
 - name: Create database
   command: "createdb"
   ignore_errors: yes
+
+- name: Remove 
+  community.general.launchd:
+    name: org.memcached
+    state: stopped
