@@ -65,7 +65,6 @@ homebrew_installed_packages:
   - autoconf
   - awscli
   - bash-completion
-  - boost
   - blueutil
   - cocoapods
   - composer
