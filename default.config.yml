@@ -69,6 +69,7 @@ homebrew_installed_packages:
   - cocoapods
   - composer
   - curl
+  - dnsmasq
   - doxygen
   - fish
   - gettext
@@ -84,6 +85,7 @@ homebrew_installed_packages:
   - libevent
   - sqlite
   - mcrypt
+  - nginx
   - nmap
   - node
   - nvm
@@ -112,6 +114,7 @@ homebrew_cask_apps:
   - blockblocko
   - calibre
   - chromedriver
+  - dbngin
   - discord
   - docker
 #  - do-not-disturb
@@ -156,7 +159,9 @@ osx_script: "~/.osx"
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: []
+composer_packages: 
+ - name: valet
+   state: present # present/absent/latest, default: present
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A

@@ -67,3 +67,6 @@
 
 - name: Use bobthefish theme
   command: fish -c "omf theme bobthefish"
+
+- name: Add custom paths
+  command: fish -c "fish_add_path ~/.composer/vendor/bin"
