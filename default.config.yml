@@ -92,6 +92,7 @@ homebrew_installed_packages:
   - pcre2
   - php@8.0
   - postgis
+  - rename
   - ssh-copy-id
   - readline
   - openssl
@@ -111,7 +112,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
 #  - blackhole-2ch
-  - blockblocko
+  - blockblock
   - calibre
   - chromedriver
   - dbngin
