@@ -1,14 +1,28 @@
 ---
 - name: Install PECL packages.
-  command: arch -arm64 sudo pecl install  {{ item.name | default(item) }}
+  #command: "{{ 'arch -arm64' if ansible_architecture == 'arm64' }} sudo pecl install -f {{ item.name | default(item) }}"
+  # when: ansible_architecture == "arm64"
+  community.general.pear:
+    name: "pecl/{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
   loop: "{{ pecl_packages }}"
 
 - name: Install global Composer packages.
-  composer:
-    command: "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
-    arguments: "{{ item.name | default(item) }} {{ item.version | default('@stable') }}"
+  #community.general.composer:
+    #command: "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
+    # arguments: "global {{ item.name | default(item) }} {{ item.version | default('@stable') }}"
     # Ansible 2.4 supports `global_command` making `working_dir` optional.
-    working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
+    # working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
+    #global_command: yes
+  command:
+    argv:
+      - composer
+      - global
+      - "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
+      - "{{ item.name | default(item) }}"
+      - "{{ ':' if item.version | default('')  }}"
+      - "{{ item.version | default('') }}"
+    # working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
   loop: "{{ composer_packages }}"
 
 - name: Install global NPM packages.

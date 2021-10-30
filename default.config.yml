@@ -134,7 +134,6 @@ homebrew_cask_apps:
   - ngrok
   - omnidisksweeper
   - oversight
-  - pushplaylabs-sidekick
   - reikey
   - spotify
   - sublime-text
@@ -160,8 +159,8 @@ osx_script: "~/.osx"
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
 composer_packages: 
- - name: valet
-   state: present # present/absent/latest, default: present
+  - name: laravel/valet
+    state: present # present/absent/latest, default: present
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
@@ -174,16 +173,16 @@ npm_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
 pip_packages:
- - name: powerline-status
-   state: present # present/absent/latest, default: present
+  - name: powerline-status
+    state: present # present/absent/latest, default: present
 omf_packages:
- - name: nvm
-   state: present # present/absent/latest, default: present
+  - name: nvm
+    state: present # present/absent/latest, default: present
 pecl_packages:
- - name: xdebug
-   state: present # present/absent/latest, default: present
- - name: swoole
-   state: present # present/absent/latest, default: present
+  - name: xdebug
+    state: present # present/absent/latest, default: present
+  - name: swoole
+    state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false

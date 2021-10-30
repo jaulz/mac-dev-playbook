@@ -43,17 +43,12 @@
     create: yes
   when: ansible_architecture == "arm64"
 
-- name: Register oh-my-fish path.
-  stat:
-    path: "{{ lookup('env', 'OMF_PATH') }}"
-  register: omf_path
-
 - name: Clone oh-my-fish
   git: repo=https://github.com/oh-my-fish/oh-my-fish.git dest=/tmp/omf update=yes
   when: omf_path is undefined
 
 - name: Install oh-my-fish
-  command: /tmp/omf/bin/install --offline
+  command: /tmp/omf/bin/install --offline --noninteractive --yes
   when: omf_path is undefined
 
 - name: Clone powerline-fonts
@@ -70,3 +65,4 @@
 
 - name: Add custom paths
   command: fish -c "fish_add_path ~/.composer/vendor/bin"
+  ignore_errors: yes
