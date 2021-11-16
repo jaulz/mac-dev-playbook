@@ -130,6 +130,7 @@ homebrew_cask_apps:
   - knockknock
   - lulu
   - maccy
+  - mailhog
   - microsoft-office-2016
   - ngrok
   - notion
