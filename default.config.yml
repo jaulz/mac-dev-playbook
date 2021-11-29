@@ -217,13 +217,13 @@ vscode_extensions:
 - johnsoncodehk.volar
 - ryannaddy.laravel-artisan
 - felixfbecker.php-debug
-- GitHub.codespaces
+- eamodio.gitlens
 vscode_overwrite_settings: yes
 vscode_settings: {
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
   "terminal.integrated.automationShell.osx": "/bin/sh",
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.profiles.osx": {
