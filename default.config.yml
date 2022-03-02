@@ -71,6 +71,7 @@ homebrew_installed_packages:
   - dnsmasq
   - doxygen
   - fish
+  - fswatch
   - gettext
   - gifsicle
   - git
