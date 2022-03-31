@@ -120,6 +120,7 @@ homebrew_cask_apps:
   - docker
 #  - do-not-disturb
   - eqmac
+  - fig
   - firefox
   - font-fira-code
   - gimp
