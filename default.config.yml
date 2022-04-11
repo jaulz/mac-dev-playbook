@@ -112,6 +112,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
 #  - blackhole-2ch
+  - blender
   - blockblock
   - calibre
   - chromedriver
