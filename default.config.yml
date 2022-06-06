@@ -85,7 +85,6 @@ homebrew_installed_packages:
   - libevent
   - sqlite
   - mcrypt
-  - nginx
   - nmap
   - node
   - nvm
@@ -141,6 +140,7 @@ homebrew_cask_apps:
   - reikey
   - ransomwhere
   - spotify
+  - stretchly
   - sublime-text
   - tableplus
   - the-unarchiver
