@@ -85,6 +85,7 @@ homebrew_installed_packages:
   - libevent
   - sqlite
   - mcrypt
+  - nginx
   - nmap
   - node
   - nvm
@@ -111,6 +112,8 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
 #  - blackhole-2ch
+  # Prioritize Spotify when using media keys
+  - beardedspice
   - blender
   - blockblock
   - calibre
@@ -119,6 +122,7 @@ homebrew_cask_apps:
   - discord
   - docker
 #  - do-not-disturb
+  # Use different channels for media output
   - eqmac
   - firefox
   - font-fira-code
@@ -127,11 +131,9 @@ homebrew_cask_apps:
   - handbrake
   - inkscape
   - google-drive
-  - transmit
   - knockknock
   - lulu
   - maccy
-  - mailhog
   - microsoft-office-2016
   - ngrok
   - notion
@@ -144,6 +146,8 @@ homebrew_cask_apps:
   - sublime-text
   - tableplus
   - the-unarchiver
+  - transmit
+  - tunnelblick
   - vagrant
   - virtualbox
   - vlc
