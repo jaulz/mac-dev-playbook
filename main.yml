@@ -48,6 +48,9 @@
     - import_tasks: tasks/homebrew.yml
       tags: ['homebrew']
 
+    - import_tasks: tasks/mkcert.yml
+      tags: ['mkcert']
+
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 

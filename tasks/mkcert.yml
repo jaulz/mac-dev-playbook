@@ -1,0 +1,4 @@
+---
+- name: Install mkcert
+  command: "mkcert -install"
+  changed_when: false
