@@ -99,7 +99,7 @@ homebrew_installed_packages:
   - openssl
 #  - starship
   - yarn
-  - youtube-dl
+  - yt-dlp
   - zsh-history-substring-search
 
 homebrew_taps:
