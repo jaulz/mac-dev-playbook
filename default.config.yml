@@ -123,8 +123,6 @@ homebrew_cask_apps:
   - discord
   - docker
 #  - do-not-disturb
-  # Use different channels for media output
-  - eqmac
   - firefox
   - font-fira-code
   - gimp
