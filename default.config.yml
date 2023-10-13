@@ -30,8 +30,8 @@ dockitems_remove:
  - Pages
  - 'System Preferences'
 dockitems_persist:
- - name: "Sidekick"
-   path: "/Applications/Sidekick.app/"
+ - name: "Chrome"
+   path: "/Applications/Google Chrome.app/"
    pos: 2
  - name: "Visual Studio Code"
    path: "/Applications/Visual Studio Code.app/"
@@ -100,7 +100,6 @@ homebrew_installed_packages:
 #  - starship
   - yarn
   - yt-dlp
-  - zsh-history-substring-search
 
 homebrew_taps:
   - homebrew/core
@@ -115,6 +114,7 @@ homebrew_cask_apps:
 #  - blackhole-2ch
   # Prioritize Spotify when using media keys
   - beardedspice
+  - bitwarden
   - blender
   - blockblock
   - calibre
