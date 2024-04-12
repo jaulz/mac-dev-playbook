@@ -115,7 +115,6 @@ homebrew_cask_apps:
   # Prioritize Spotify when using media keys
   - beardedspice
   - bitwarden
-  - blender
   - blockblock
   - calibre
   - chromedriver
@@ -125,33 +124,27 @@ homebrew_cask_apps:
 #  - do-not-disturb
   - firefox
   - font-fira-code
-  - gimp
   - google-chrome
-  - handbrake
-  - inkscape
   - google-drive
   - knockknock
   - lulu
   - maccy
   - microsoft-office-2016
-  - ngrok
   - notion
   - omnidisksweeper
   - oversight
   - reikey
   - ransomwhere
+  - slack
   - spotify
   - stretchly
   - sublime-text
   - tableplus
   - the-unarchiver
-  - transmit
   - tunnelblick
   - vagrant
   - virtualbox
-  - vlc
   - whatsapp
-  - wireshark
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
