@@ -110,7 +110,6 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - barrier
 #  - blackhole-2ch
   # Prioritize Spotify when using media keys
   - beardedspice
@@ -119,7 +118,6 @@ homebrew_cask_apps:
   - calibre
   - chromedriver
   - dbngin
-  - discord
   - docker
 #  - do-not-disturb
   - firefox
@@ -128,11 +126,11 @@ homebrew_cask_apps:
   - google-drive
   - knockknock
   - lulu
-  - maccy
   - microsoft-office-2016
   - notion
   - omnidisksweeper
   - oversight
+  - raycast
   - reikey
   - ransomwhere
   - slack
