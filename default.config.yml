@@ -30,15 +30,21 @@ dockitems_remove:
  - Pages
  - 'System Preferences'
 dockitems_persist:
- - name: "Chrome"
-   path: "/Applications/Google Chrome.app/"
-   pos: 2
- - name: "Visual Studio Code"
-   path: "/Applications/Visual Studio Code.app/"
-   pos: 3
  - name: "Spotify"
    path: "/Applications/Spotify.app/"
+   pos: 2
+ - name: "Chrome"
+   path: "/Applications/Google Chrome.app/"
+   pos: 3
+ - name: "PhpStorm"
+   path: "/Applications/PhpStorm.app/"
    pos: 4
+ - name: "DataGrip"
+   path: "/Applications/DataGrip.app/"
+   pos: 5
+ - name: "Visual Studio Code"
+   path: "/Applications/Visual Studio Code.app/"
+   pos: 6
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -86,12 +92,10 @@ homebrew_installed_packages:
   - sqlite
   - mcrypt
   - mkcert
-  - nginx
   - nmap
   - node
   - nvm
   - pcre2
-  - php@8.0
   - postgis
   - rename
   - ssh-copy-id
@@ -99,7 +103,6 @@ homebrew_installed_packages:
   - openssl
 #  - starship
   - yarn
-  - yt-dlp
 
 homebrew_taps:
   - homebrew/core
@@ -115,40 +118,34 @@ homebrew_cask_apps:
   - beardedspice
   - bitwarden
   - blockblock
-  - calibre
-  - chromedriver
-  - dbngin
-  - docker
+  - datagrip
 #  - do-not-disturb
   - firefox
   - font-fira-code
   - google-chrome
-  - google-drive
   - knockknock
   - lulu
-  - microsoft-office-2016
-  - notion
+  - microsoft-teams
   - omnidisksweeper
+  - orbstack
   - oversight
-  - raycast
+  - phpstorm
   - reikey
   - ransomwhere
   - slack
   - spotify
   - stretchly
   - sublime-text
-  - tableplus
   - the-unarchiver
+  - timche-gmail-desktop
   - tunnelblick
-  - vagrant
-  - virtualbox
+  - visual-studio-code
   - whatsapp
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
 #  - { id: 441258766, name: "Magnet" }
   - { id: 497799835, name: "XCode" }
-  - { id: 937984704, name: "Amphetamine" }
 mas_email: ""
 mas_password: ""
 
@@ -157,9 +154,9 @@ osx_script: "~/.osx"
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: 
-  - name: laravel/valet
-    state: present # present/absent/latest, default: present
+composer_packages: []
+#  - name: laravel/valet
+#    state: present # present/absent/latest, default: present
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
@@ -171,17 +168,17 @@ npm_packages: []
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
-pip_packages:
-  - name: powerline-status
-    state: present # present/absent/latest, default: present
+pip_packages: []
+#  - name: powerline-status
+#    state: present # present/absent/latest, default: present
 omf_packages:
   - name: nvm
     state: present # present/absent/latest, default: present
-pecl_packages:
-  - name: xdebug
-    state: present # present/absent/latest, default: present
-  - name: swoole
-    state: present # present/absent/latest, default: present
+pecl_packages: []
+#  - name: xdebug
+#    state: present # present/absent/latest, default: present
+#  - name: swoole
+#    state: present # present/absent/latest, default: present
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
@@ -203,17 +200,11 @@ sublime_package_control:
 
 # Install Postgres
 postgresql_user_name: postgres
-postgresql_version: 11
+postgresql_version: 17
 
 # Setup vscode
 vscode_extensions:
-- waderyan.gitblame
-- cjhowe7.laravel-blade
-- bmewburn.vscode-intelephense-client
 - esbenp.prettier-vscode
-- johnsoncodehk.volar
-- ryannaddy.laravel-artisan
-- felixfbecker.php-debug
 - eamodio.gitlens
 vscode_overwrite_settings: yes
 vscode_settings: {
@@ -231,9 +222,6 @@ vscode_settings: {
           ]
       }
   },
-  "php.validate.executablePath": "/opt/homebrew/opt/php/bin/php",
-  "artisan.php.location": "/opt/homebrew/opt/php/bin/php",
-  "LaravelExtraIntellisense.phpCommand": "/opt/homebrew/opt/php/bin/php -r \"{code}\"",
   "[vue]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
