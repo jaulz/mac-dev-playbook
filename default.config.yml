@@ -90,7 +90,6 @@ homebrew_installed_packages:
   - jq
   - libevent
   - sqlite
-  - mcrypt
   - mkcert
   - nmap
   - node
