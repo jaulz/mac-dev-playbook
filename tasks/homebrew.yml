@@ -1,4 +1,4 @@
 ---
 - name: Start brew autoupdate
-  command: "sudo brew autoupdate start"
+  command: "brew autoupdate start"
   changed_when: false
