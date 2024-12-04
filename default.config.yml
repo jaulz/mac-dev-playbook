@@ -116,6 +116,7 @@ homebrew_cask_apps:
 #  - do-not-disturb
   - firefox
   - font-fira-code
+  - font-hack-nerd-font
   - google-chrome
   - knockknock
   - lulu
