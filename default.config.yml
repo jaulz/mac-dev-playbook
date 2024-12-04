@@ -95,7 +95,6 @@ homebrew_installed_packages:
   - node
   - nvm
   - pcre2
-  - postgis
   - rename
   - ssh-copy-id
   - readline
