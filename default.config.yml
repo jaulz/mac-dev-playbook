@@ -28,6 +28,7 @@ dockitems_remove:
  - Numbers
  - Pages
  - 'System Preferences'
+ - Freeform
 dockitems_persist:
  - name: "Spotify"
    path: "/Applications/Spotify.app/"
