@@ -98,7 +98,6 @@ homebrew_installed_packages:
   - ssh-copy-id
   - readline
   - openssl
-  - termius
 #  - starship
   - yarn
 
@@ -131,8 +130,8 @@ homebrew_cask_apps:
   - spotify
   - stretchly
   - sublime-text
+  - tabby
   - the-unarchiver
-  - timche-gmail-desktop
   - tunnelblick
   - visual-studio-code
   - whatsapp
