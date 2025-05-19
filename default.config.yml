@@ -85,21 +85,20 @@ homebrew_installed_packages:
   - github/gh/gh
   - go
   - gpg
-  - httpie
   - imagemagick
   - iperf
   - jq
   - libevent
   - sqlite
   - mkcert
-  - nmap
-  - node
+#  - node
   - nvm
   - pcre2
   - rename
   - ssh-copy-id
   - readline
   - openssl
+  - termius
 #  - starship
   - yarn
 
